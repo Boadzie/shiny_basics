@@ -1,4 +1,4 @@
-from shiny import ui, render, App 
+from shiny import ui, render, App, reactive
 
 
 app_ui = ui.div(
@@ -8,10 +8,16 @@ app_ui = ui.div(
 )
 
 def server(input, output, session):
+
+    @reactive.Calc
+    def square():
+        return input.num() ** 2
+        
+
     @output
     @render.text()
     def result():
-        return f"The Number times 2 is: {input.num() * 2}"
+        return f"{input.num()} squared is: {square()}"
     
 
 app = App(app_ui, server)
