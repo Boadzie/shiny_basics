@@ -15,7 +15,7 @@ def server(input, output, session):
         
 
     @output
-    @render.text()
+    @render.text
     def result():
         return f"{input.num()} squared is: {square()}"
     
