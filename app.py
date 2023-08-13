@@ -6,11 +6,11 @@ df = pl.scan_csv("organizations-2000000.csv")
 
 app_ui = ui.page_fluid(
     ui.div(
-        ui.h2("Learning Shiny", class_="text-4xl my-2"),
+        ui.h2("Learning Shiny & Friends", class_="text-4xl my-2"),
         ui.div(
-            ui.input_text("country", "Search country", width="40%"),
+            ui.input_text("country", "", width="40%", placeholder="Search Country"),
             ui.input_action_button("search", "Search"),
-            class_="grid grid-col-1",
+            class_="flex items-center space-x-4",
         ),
     ),
     ui.div(ui.output_table("tablex"), class_="mt-4 font-bold"),
