@@ -31,7 +31,13 @@ pip install -r requirements.txt
 ## Run the app
 
 ```bash
-shiny run --reload app.py
+shiny run app.py --reload
 ```
 
 Then visit `localhost:8000`
+
+---
+
+## Parts
+
+### The Basics
